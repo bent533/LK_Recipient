@@ -20,7 +20,7 @@ public class LinkTest {
     
     @BeforeMethod
     public void setUp() throws Exception {
-      //  System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\IBS_automated_testing\\chromedriver.exe");
         wd = new ChromeDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
@@ -38,12 +38,17 @@ public class LinkTest {
       //  new Actions(wd).doubleClick(wd.findElement(By.id("snils"))).build().perform();
      //   wd.findElement(By.cssSelector("div.content-box.login-slils-box")).click();
         wd.findElement(By.linkText("СНИЛС")).click();
+   //   wd.findElement(By.xpath("//input[@id='snils']"));
        By snils = By.cssSelector("input#snils");
     //    wd.findElement(By.id("snils")).click();
       //  wd.findElement(By.id("snils")).f;
 
-        wd.findElement(snils).sendKeys("00000060004");
-
+      //  wd.findElement(By.xpath("//input[@id='snils']")).sendKeys("00000060004");
+      wd.findElement(snils).click();
+      wd.findElement(snils).sendKeys("00000060004");
+      wd.findElement(snils).sendKeys("00000060004");
+      wd.findElement(snils).sendKeys("00000060004");
+      wd.findElement(snils).sendKeys("00000060004");
 //        wd.findElement(By.id("snils")).clear();
         /*
 
