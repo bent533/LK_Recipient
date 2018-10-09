@@ -34,7 +34,6 @@ public class ELN_auth {
 
         wd.get("http://localhost:3000/");
         // ждём появления кнопки на "недозагруженной" странице
-        //  WebElement button = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.contract-tile__title")));
         // WebElement button = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@class='tiles__item']//p[text()='Технические средства реабилитации']")));
         WebElement load = wd.findElement(By.xpath("//li[@class='tiles__item']//p[text()='Технические средства реабилитации']"));
         wait.until(stalenessOf(load));
@@ -45,23 +44,13 @@ public class ELN_auth {
             e.printStackTrace();
         }
         wd.findElement(By.xpath("//li[@class='tiles__item']//p[text()='Технические средства реабилитации']")).click();
-
-     //   load.click();  // почему не работает?
-        // ждём исчезновения кнопки, то есть "выгрузки" страницы
         wait.until(stalenessOf(load));
-// ждём загрузки следующей страницы
- //       wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("menu")));
-     /*   wd.findElement(By.cssSelector("div.contract-tile__title")).click();*/
-        //wd.findElement(By.linkText("Фильтр")).click();
-//        wd.findElement(By.xpath("//div[@class='filter']//div[normalize-space(.)='Фильтр']")).click();
-//
-//
-//
-//
-//        wd.findElement(By.cssSelector(".filter__btn btn _blue _filter")).click();
-//        wd.findElement(By.cssSelector("span.Select-arrow-zone")).click();
-//        wd.findElement(By.xpath("//div[@class='filterdd__actions-left']//span[.='Применить']")).click();
-//        wd.findElement(By.xpath("//tbody[@class='table__cont']//p[.='092395253947']")).click();
+
+        int a;
+
+
+
+
     }
     
     @AfterMethod

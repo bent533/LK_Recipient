@@ -15,7 +15,7 @@ import java.io.File;
 //import org.openqa.selenium.*;
 //import static org.openqa.selenium.OutputType.*;
 
-public class LinkTest {
+public class AuthTest {
     ChromeDriver wd;
     
     @BeforeMethod
