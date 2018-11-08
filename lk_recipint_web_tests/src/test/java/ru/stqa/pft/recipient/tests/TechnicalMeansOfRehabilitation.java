@@ -11,6 +11,7 @@ public class TechnicalMeansOfRehabilitation extends TestBase {
         //объекту вспомогательного класса делегируется некоторые действия
         app.getNavigationHelper().gotoTsrPage();
         app.getNavigationHelper().openFilter();
+
   }
 
 

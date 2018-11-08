@@ -9,6 +9,7 @@ import ru.stqa.pft.recipient.appmanager.ApplicationManager;
  */
 public class TestBase {
 
+    //перешли от наследования к ДЕЛЕГИРОВАНИЮ
     protected final ApplicationManager app = new ApplicationManager();
 
     @BeforeMethod
