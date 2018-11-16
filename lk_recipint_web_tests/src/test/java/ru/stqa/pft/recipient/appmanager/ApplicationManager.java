@@ -11,7 +11,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class ApplicationManager {
     ChromeDriver wd;
+
     private NavigationHelper navigationHelper;
+    private InstructionHelper instrucitonHelper;
 
     public static boolean isAlertPresent(ChromeDriver wd) {
         try {
@@ -27,6 +29,7 @@ public class ApplicationManager {
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         wd.get("http://localhost:3000/");
         navigationHelper = new NavigationHelper(wd);
+        instrucitonHelper = new InstructionHelper(wd);
         WebDriverWait wait = new WebDriverWait(wd, 80, 1000);
     }
 
@@ -37,4 +40,5 @@ public class ApplicationManager {
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
     }
+    public InstructionHelper getInstructionHelper() {return instrucitonHelper; }
 }
