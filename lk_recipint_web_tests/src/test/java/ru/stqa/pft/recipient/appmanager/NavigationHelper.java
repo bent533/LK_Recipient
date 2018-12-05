@@ -137,4 +137,48 @@ public class NavigationHelper  extends HelperBase {
         Thread.sleep(3000);
     }
 
+
+
+
+
+    //Новый проект
+
+    public void loginPortalEmployerOfTheFund() throws InterruptedException
+    {
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        loginPEF();
+    }
+
+    public void goToELN () throws InterruptedException {
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        click(By.xpath("//ul[@class='services__list gridster js-draggable _services _inited']//p[text()=' Электронный листок нетрудоспособности ']"));
+    }
+
+
+    public  void openRegistryChecksFLC() throws InterruptedException {
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+
+
+        //click(By.xpath("//div[@id='panel-1011-innerCt']//li[@id='ext-treelistitem-17']//div[@class='x-treelist-item-expander']"));
+        click(By.xpath("//li[@id='ext-treelistitem-17']//div[@class='x-treelist-item-expander']"));
+
+    }
+
+
 }
+
+
+
+

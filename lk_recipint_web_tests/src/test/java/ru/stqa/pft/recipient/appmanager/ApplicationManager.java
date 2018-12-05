@@ -27,9 +27,14 @@ public class ApplicationManager {
     public void init() throws InterruptedException {
         wd = new ChromeDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        wd.get("http://localhost:3000/");
+//        wd.get("http://localhost:3000/");
+        wd.get("https://portal-dev.fss.local/");  //для нашего проекта перешли на новый сайт
+
+
+        //создаем экземпляр класса
         navigationHelper = new NavigationHelper(wd);
         instrucitonHelper = new InstructionHelper(wd);
+
         WebDriverWait wait = new WebDriverWait(wd, 80, 1000);
     }
 
