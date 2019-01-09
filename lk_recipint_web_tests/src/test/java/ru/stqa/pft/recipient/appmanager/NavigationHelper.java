@@ -163,20 +163,35 @@ public class NavigationHelper  extends HelperBase {
 
 
     public  void openRegistryChecksFLC() throws InterruptedException {
+      /*  Thread.sleep(3000);
         Thread.sleep(3000);
         Thread.sleep(3000);
         Thread.sleep(3000);
         Thread.sleep(3000);
         Thread.sleep(3000);
-        Thread.sleep(3000);
-
+*/
 
         //click(By.xpath("//div[@id='panel-1011-innerCt']//li[@id='ext-treelistitem-17']//div[@class='x-treelist-item-expander']"));
-        click(By.xpath("//li[@id='ext-treelistitem-17']//div[@class='x-treelist-item-expander']"));
+        //click(By.xpath("//div[@id='panel-1011-innerCt']//li[@id='ext-treelistitem-17']//div[text()='Администрирование ФЛК']"));
+//div[@id='panel-1011-innerCt']//li[@id='ext-treelistitem-17']//div[@class='x-treelist-item-expander']
+
+        //div[@id='panel-1011-innerCt']//li[@id='ext-treelistitem-17']//div[@class='x-treelist-item-expander']
+      //  click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Администрирование ФЛК'])[1]/following::div[1]"));
+
+
+     //   css=#ext-element-77 > div.x-treelist-item-expander
+        //div[@id='ext-element-77']/div[3]
+
+     //   click(By.xpath("//div[@id='ext-element-77']/div[3]"));
+
+      openCheckFLK();
+
+
+
+
+
 
     }
-
-
 }
 
 

@@ -29,7 +29,7 @@ public class HelperBase {
         //вводим логин
         WebElement login = wd.findElement(By.xpath("//div[@class='login-form']//input[@class='field inp _text _pass clearable']"));
         Actions builder = new Actions(wd);
-        Actions seriesOfActions = builder.moveToElement(login).click().sendKeys(login, "TestanRO4");
+        Actions seriesOfActions = builder.moveToElement(login).click().sendKeys(login, "central-office");
         seriesOfActions.perform(); // в этот момент осуществялется ввод
 
         //вводим пароль
@@ -43,6 +43,48 @@ public class HelperBase {
         WebElement enter = wd.findElement(By.xpath("//div[@class='login-form__btns']//div[@class='login-form__btn']"));
         enter.click();
     }
+
+
+
+    protected  void  openCheckFLK() throws InterruptedException {
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+
+
+        wd.switchTo().defaultContent();
+        //wd.switchTo().frame(wd.findElement(By.xpath("//iframe[@src='https://portal-dev.fss.local/fssarm/?']")));
+      //  wd.switchTo().frame(wd.findElement(By.xpath("//div[@class='portlet-boundary portlet-boundary_48_ portlet-static portlet-static-end portlet-borderless portlet-iframe ']//iframe[@src='/fssarm/?']")));
+
+        WebElement myframe = wd.findElement(By.xpath("//*[@id=\"fssarmiframe\"]"));
+        Actions actionWithYourFrame = new Actions(wd);
+        actionWithYourFrame.moveToElement(myframe).build().perform();
+        myframe.click();
+    //    wd.switchTo().frame(wd.findElement(By.xpath("//*[@id=\"fssarmiframe\"]")));
+
+      //  wd.findElement(By.xpath("//*[@id=\"ext-element-77\"]/div[3]")).click();
+                                                     //div[@id='ext-element-88']//div[3]
+
+        WebElement admflk = wd.findElement(By.xpath("//div[@id='ext-element-88']//div[3]"));
+      //  WebElement admflk = wd.findElement(By.xpath("//div[@id='ext-element-88']//div[@id='ext-element-106']"));
+
+
+        Actions actionAdmFlk = new Actions(wd);
+        actionAdmFlk.moveToElement(admflk).build().perform();
+        admflk.click();
+
+
+
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        wd.findElement(By.id("ext-element-79")).click();
+        Thread.sleep(3000);
+        Thread.sleep(3000);
+        wd.findElement(By.id("button-1323-btnInnerEl")).click();
+
+    }
+
 
 /*
 
